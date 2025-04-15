@@ -1,19 +1,21 @@
 /* variaveis de cores */
-:root{
+:root {
     --cor-primaria: #0a243e;
+    --cor-destaque: #e74c3c;
     --cor-texto: #333;
     --cor-clara: #f9f9f9;
+    --sombra: 0 3px 10px rgba(0, 0, 0,0.5)
 }
 
-/* reset layout navegador */
-*{
-    margin: 0%;
-    padding: 0%;
+/* reset layout navegador*/
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family:'Segoe UI', sans-serif ;
+    font-family: 'Segoe UI', sans-serif;
     line-height: 1.6;
     color: var(--cor-texto)
 }
@@ -43,8 +45,8 @@ body {
     display: flex;
     gap: 2rem;
     list-style: none;
-
 }
+
 .menu a {
     color: var(--cor-clara);
     text-decoration: none;
@@ -66,7 +68,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;    
+    z-index: -1;
 }
 
 .video-container video {
@@ -74,6 +76,53 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center;
-
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner .container {
+    max-width: 600px;
+    text-align: left;
+}
+
+.sobre {
+    padding: 4rem 0;
+}
+
+.sobre-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.sobre-conteudo img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: var(--sombra);
+}
+
+.sobre-texto ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.sobre-texto li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.sobre-texto li::before {
+    content: '•';
+    color: var(--cor-destaque);
+    position: absolute;
+    left: 0;
+}
